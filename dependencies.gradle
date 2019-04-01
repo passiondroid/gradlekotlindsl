@@ -1,7 +1,7 @@
 ext {
-    minSdkVersion = 15
-    targetSdkVersion = 28
-    compileSdkVersion = 28
+    minSdkVersionAndroid = 15
+    targetSdkVersionAndroid = 28
+    compileSdkVersionAndroid = 28
     buildToolsVersion = '3.3.1'
 
     jetpackVersion = '1.0.0-beta01'

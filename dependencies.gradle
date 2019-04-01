@@ -2,18 +2,20 @@ ext {
     minSdkVersion = 15
     targetSdkVersion = 28
     compileSdkVersion = 28
+    buildToolsVersion = '3.3.1'
 
-    androidBuildToolsVersion = '3.4.0-alpha09'
+    jetpackVersion = '1.0.0-beta01'
+    constraintLayoutVersion = '1.1.2'
+    kotlinVersion = '1.3.21'
+    espressoVersion = '3.1.0-alpha4'
+    ktxVersion = '1.1.0-alpha05'
+    testRunnerVersion = '1.1.0-alpha4'
+    espressoVersion = '3.1.0-alpha4'
 
-    jetpackVersion = '1.1.0-alpha01'
-    constraintLayoutVersion = '2.0.0-alpha3'
-    kotlinVersion = '1.3.11'
-    ktxVersion = '1.1.0-alpha03'
-
-    junit4Version = '4.13-beta-1'
+    junitVersion = '4.12'
 
     buildPlugins = [
-            androidGradlePlugin: "com.android.tools.build:gradle:$androidBuildToolsVersion",
+            androidGradlePlugin: "com.android.tools.build:gradle:$buildToolsVersion",
             kotlinGradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     ]
 
@@ -21,15 +23,13 @@ ext {
             kotlinStdLib    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
             appCompat       : "androidx.appcompat:appcompat:$jetpackVersion",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
-            ktxCore         : "androidx.core:core-ktx:$ktxVersion",
+            ktxCore         : "androidx.core:core-ktx:$ktxVersion"
     ]
 
     testLibraries = [
-            junit4: "junit:junit:$junit4Version",
+            junit4     : "junit:junit:$junitVersion",
+            testRunner : "androidx.test:runner:$testRunnerVersion",
+            espresso   : "androidx.test.espresso:espresso-core:$espressoVersion"
     ]
 
-    projectModules = [
-            core      : project(':core'),
-            topartists: project(':topartists')
-    ]
 }

@@ -31,5 +31,4 @@ ext {
             testRunner : "androidx.test:runner:$testRunnerVersion",
             espresso   : "androidx.test.espresso:espresso-core:$espressoVersion"
     ]
-
 }
